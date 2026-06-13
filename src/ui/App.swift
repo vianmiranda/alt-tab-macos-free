@@ -392,7 +392,7 @@ class App: AppCenterApplication {
             pendingShowSettingsWindow = false
             showSettingsWindow()
         }
-        #if DEBUG
+        #if false
 //            App.showSettingsWindow()
         #endif
         UsageStats.prune()
@@ -406,10 +406,10 @@ extension App: NSApplicationDelegate {
         App.shared.disableRelaunchOnLogin()
         Logger.initialize()
         Logger.info { "Launching AltTab \(App.version)" }
-        #if DEBUG
+        #if false
         UserDefaults.standard.set(true, forKey: "NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints")
         #endif
-        #if !DEBUG
+        #if !false
         PFMoveToApplicationsFolderIfNecessary()
         #endif
         AXUIElement.setGlobalTimeout()
