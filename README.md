@@ -1,3 +1,19 @@
+Note that this is the "Debug" version! The "Release" version requires a development team (which I don't have), and even if there is a way around it I don't care enough to figure out how to get it working at the moment. However, I have enabled compiler optimizations so this point should be moot.
+
+You can build the app by cloning this repository and running:
+
+```bash
+xcodebuild \
+  -workspace alt-tab-macos.xcworkspace \
+  -scheme Debug \
+  -derivedDataPath DerivedData \
+  CODE_SIGN_IDENTITY="" \
+  CODE_SIGNING_REQUIRED=NO \
+  CODE_SIGNING_ALLOWED=NO
+```
+
+
+
 <div align = center>
 
 # AltTab
